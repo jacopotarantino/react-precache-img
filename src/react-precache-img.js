@@ -1,7 +1,7 @@
 import { PropTypes } from 'react';
 
-const PreCacheImg = (props) => {
-  const precache = (images) => {
+const PreCacheImg = props => {
+  const precache = images => {
     let image;
     for (let i = 0, len = images.length; i < len; i += 1) {
       image = new Image(); // eslint-disable-line no-undef
@@ -14,7 +14,7 @@ const PreCacheImg = (props) => {
 };
 
 PreCacheImg.propTypes = {
-  images: PropTypes.arrayOf.isRequired,
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default PreCacheImg;
