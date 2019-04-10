@@ -1,1 +1,3 @@
-export default from './react-precache-img';
+import ReactPrecacheImg from './react-precache-img';
+
+export default ReactPrecacheImg;

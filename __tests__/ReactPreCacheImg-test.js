@@ -1,17 +1,14 @@
-jest.unmock('../src/ReactPreCacheImg');
+jest.unmock('../src/react-precache-img');
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
-import ReactPreCacheImg from '../src/ReactPreCacheImg'
+import ReactPreCacheImg from '../src/react-precache-img';
 
 describe('<ReactPreCacheImg />', () => {
   it('', () => {
     const renderer = TestUtils.createRenderer();
-    renderer.render(
-      <ReactPreCacheImg />
-    );
+    renderer.render(<ReactPreCacheImg />);
     const dom = renderer.getRenderOutput();
-    //expect(dom.props.//PROPS_NAME).toEqual('//TEXT');
+    expect(dom.props.PROPS_NAME).toEqual('TEXT');
   });
 });
